@@ -1,0 +1,187 @@
+/* Basic reset for better control over styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center; /* Center align content globally */
+}
+
+/* Header Styling */
+header {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between; /* Align logo, site name, and nav */
+    align-items: center;
+    position: relative;
+}
+
+/* Logo Styling */
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo-img {
+    width: 100px; /* Adjust the logo size */
+    height: auto;
+    border: 0.5px solid black; /* Black border around logo */
+    padding: 2px;
+    border-radius: 2px; /* Slight rounded corners */
+}
+
+/* Center-aligned Website Name */
+header .site-name {
+    text-align: center;
+    flex-grow: 1; /* Takes available space in the header */
+}
+
+header .site-name a {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation Styling */
+header nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Menu Icon */
+header .menu-icon {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) {
+    /* Make menu icon visible on smaller screens */
+    header .menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav.active {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        background-color: #000;
+        padding: 20px;
+        border-radius: 5px;
+    }
+}
+
+/* Main content sections */
+section {
+    padding: 50px 15px;
+}
+
+/* Form section styling (for contact form) */
+.contact-form {
+    background-color: #f5f5dc; /* Cream color */
+    border: 2px solid #ccc;
+    padding: 30px;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements inside contact form */
+.contact-form input,
+.contact-form select,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Button styles */
+.contact-form button {
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer .footer-links {
+    margin-bottom: 20px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Center-align footer contents */
+footer .footer-links,
+footer .social-icons {
+    text-align: center;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+        width: 90%;
+    }
+}
